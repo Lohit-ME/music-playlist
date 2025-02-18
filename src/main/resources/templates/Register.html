@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<style>
+ .container2{
+    
+    box-sizing: border-box;
+    
+    }
+
+  .container2{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right:50%;
+   text-align: center;
+    padding: 20px 100px;
+    margin-bottom: 80px;
+  }
+  
+  .contact-box2{
+    max-width: 1050px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+  }
+  
+  .left{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    animation: slider4 6s linear infinite;
+    background-image: url(images/Front.jpg);
+  }
+  
+  .right{
+    padding: 25px 40px;
+  }
+
+@media screen and (max-width: 880px){
+	.contact-box2{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+.example-2{
+   margin-right: 120px;
+  }
+}
+
+  
+  .co{
+    position: relative;
+    padding: 0 0 10px;
+    margin-bottom: 10px;
+  }
+  
+  .co:after{
+    content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      height: 4px;
+      width: 50px;
+      border-radius: 2px;
+      background-color:  #2ecc71;
+  }
+  
+  .field2{
+    width: 90%;
+    border: 2px solid rgba(0, 0, 0, 0);
+    outline: none;
+    background-color: rgba(230, 230, 230, 0.6);
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+  }
+  
+  .field2:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  textarea{
+    min-height: 110px;
+  }
+  
+  .btn2{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #2ecc71;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+    display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        
+  }
+  
+  .btn2:hover{
+      background-color: #27ae60;
+  }
+  
+  .field2:focus{
+      border: 2px solid rgba(30,85,250,0.47);
+      background-color: #fff;
+  }
+  
+
+  .c1 {
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }   
+  
+label{
+
+    font-size: 20px;
+}
+
+body{
+
+padding-top: 8%;
+}
+
+.er{
+color:red;
+}
+</style>
+<title>Register</title>
+</head>
+<body style="background-color:black;">
+
+<div class="container2">
+    <div class="contact-box2">
+        <div class="left">
+           
+        
+        </div>
+        <div class="right">
+            <h2 class="co">Register</h2>
+            <br>
+            <form action="/register" method="post" >
+                <label for="username">UserName:</label>
+                <input type="text" id="username" name="username" placeholder="username"  th:value="${user.username}">
+    
+    
+    
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="password">
+    
+                <label for="confirmpassword">Confirm Password:</label>
+                <input type="password" id="confirmpassword" name="confirmpassword" placeholder="confirmpassword">
+<br>
+<br>
+              <div class="c1">
+                  <button type="submit" class="btn2">SUBMIT</button>
+              </div>
+            </form>
+            
+            <!-- errors messages -->
+            <div class=er>
+            <div th:if="${errors}">
+            <ul class=text-danger>
+            <li th:each="errors:${errors}" th:text="${errors}"></li>
+            </ul>
+            </div>
+            </div>
+            <!-- end of message -->
+            
+            </div>
+            </div>
+            </div>              
+</body>
+</html>
