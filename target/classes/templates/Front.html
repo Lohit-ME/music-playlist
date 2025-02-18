@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+   body
+   {
+    margin: 0%;
+    padding: 0%;
+    background-color: white;
+   }
+  
+  .navbar{
+    background-color:white;
+    color: black;
+    margin: 0px;
+    padding: 10px;
+    box-shadow: 0px 0px 8px 0px;  
+  }
+  
+  .navbar ul,li,h1,button{
+    display: inline;
+  }
+  
+  .navbar li{
+    color: black;
+    font-size: 20px;
+    margin: 24px;
+  }
+  
+  a{
+    text-decoration: none;
+  color: grey;
+  }
+  
+  a:hover{
+    color: black;
+  }
+  
+  .navbar ul{
+    margin-left: 32%;
+  } 
+  
+  .navbar li {
+    position: relative; 
+    color: black;
+    font-size: 20px;
+    margin: 0 24px;
+  }
+  
+  .navbar li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s; 
+  }
+  
+  .navbar li:hover::after {
+    width: 100%; 
+  }
+  
+  a {
+    text-decoration: none;
+    color: grey;
+  }
+  
+  a:hover {
+    color: black;
+  }
+
+  
+.btn{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 150px;
+    
+
+}
+
+    
+
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+<header>
+        <div class="navbar">
+           <h1 style="font-size: 40px;"><span id="builders" style="color: rgb(255, 6, 6);font-size: 25px;font-family: Cursive	;">  My Playlist..!  </span></h1>
+            <ul>
+                <li><a href="#Home"></a></li>
+                <li><a href="#Service"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#Project"></a></li>
+                <li><a href="#Pricing"></a></li>
+                <li><a href="#Gallery"></a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+                </div>
+    </header>
+    
+    
+    
+    <div class="btn">
+        <button style="width: 100px;height: 50px;border-radius: 10px;background-color: rgb(49, 175, 238);" onclick="window.location.href='/login'">Login</button>
+        <button style="width: 100px;height: 50px;border-radius: 10px;background-color: red;" onclick="window.location.href='/Admin/login'">New User</button>
+        </div>
+        
+
+</body>
+</html>
